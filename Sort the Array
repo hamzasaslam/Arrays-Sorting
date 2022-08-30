@@ -1,0 +1,37 @@
+#include <iostream>;
+#include <math.h>
+using namespace std;
+int main()
+{
+    int i, j, temp, numbers[5] = {4, 6, 3, 2, 1};
+    cout << "Aray before sorting is:\n"
+         << "[ ";
+    for (i = 0; i < 5; ++i)
+    {
+        cout << numbers[i];
+    }
+    cout << " ]";
+
+    for (i = 0; i < 5; i++)
+    {
+        for (j = i + 1; j < 5; j++)
+        {
+            if (numbers[i] > numbers[j])
+            {
+                temp = numbers[i];
+                numbers[i] = numbers[j];
+                numbers[j] = temp;
+            }
+        }
+    }
+    cout << "\n";
+    cout << "Aray After sorting is:\n"
+         << "[ ";
+    for (i = 0; i < 5; ++i)
+    {
+        cout << numbers[i];
+    }
+    cout << " ]";
+
+    return 0;
+}
